@@ -1,0 +1,10 @@
+name: First Workflow # name of the workflow.
+on: workflow_dispatch #event when workflow will be triggered manually.
+jobs:            #jobs is reserved keyword.
+  first-job:     #name of step could be anything
+    runs-on: ubuntu-latest  #Reserved keyword. Here we are defining "runner" i.e. VM where Jobs will be executed.
+    steps:
+      - name: Print Greeting  # Step-1
+        run: echo "Hello World!!" # Commad to execute.
+      - name: Print Goodbye    # Step-2
+        run: echo "Done - bye!"   # Commad to execute.
